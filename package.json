@@ -1,6 +1,6 @@
 {
   "name": "get-ip-onixhometask-01",
-  "version": "1.0.1-alpha",
+  "version": "1.0.3-alpha",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/SmolinR/Homework-01#readme",
   "dependencies": {
-    "nodemon": "2.0.16"
   },
   "devDependencies": {
+    "nodemon": "2.0.16",
     "eslint": "8.17.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.26.0"
