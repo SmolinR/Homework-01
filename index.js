@@ -18,7 +18,6 @@ getIpInfo.public = () => {
 getIpInfo.private = () => {
     // eslint-disable-next-line no-shadow
     const adresses = Object.keys(os).reduce((result, dev) => result.concat(os[dev].reduce((result, details) => result.concat(details.family === 'IPv4' && !details.internal ? [details.address] : []), [])));
-    console.log(`Your private IP address is - ${adresses}`);
+    return console.log(`Your private IP address is - ${adresses}`);
 };
-getIpInfo.private();
 module.exports = getIpInfo;
