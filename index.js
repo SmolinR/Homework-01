@@ -10,8 +10,9 @@ getIpInfo.public = () => {
             res.on('data', (ip) => {
                 data += ip;
             });
+            // eslint-disable-next-line arrow-body-style
             res.on('end', () => {
-                console.log(`Your public IP address is - ${data}`);
+                return console.log(`Your public IP address is - ${data}`);
             });
         },
     );
@@ -21,5 +22,4 @@ getIpInfo.private = () => {
     const adresses = Object.keys(os).reduce((result, dev) => result.concat(os[dev].reduce((result, details) => result.concat(details.family === 'IPv4' && !details.internal ? [details.address] : []), [])));
     return console.log(`Your private IP address is - ${adresses}`);
 };
-getIpInfo.public();
 module.exports = getIpInfo;

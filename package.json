@@ -1,6 +1,6 @@
 {
   "name": "get-ip-onixhometask-01",
-  "version": "1.0.6-alpha",
+  "version": "1.0.8-alpha",
   "description": "",
   "main": "index.js",
   "scripts": {
