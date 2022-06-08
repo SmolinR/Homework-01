@@ -5,11 +5,11 @@
 - If you want to get npm in you code use: require('get-ip-onixhometask-01').
 # Usage
 - For getting public IP use method **public**:
-`const getIp = require('get-ip-onixhometask-01');`
-`getIp.public();`
-// You get console.log with public IP
+    1. `const getIp = require('get-ip-onixhometask-01');`
+    2. `getIp.public();`
+    3. // You get console.log with public IP
 - For getting private IP use method **private**:
-`const getIp = require('get-ip-onixhometask-01');`
-`getIp.private();`
-// You get console.log with private IP
+    1. `const getIp = require('get-ip-onixhometask-01');`
+    2. `getIp.private();`
+    3. // You get console.log with private IP
 
