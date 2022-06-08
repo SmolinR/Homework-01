@@ -6,11 +6,12 @@ getIpInfo.public = () => {
     http.get(
         { host: 'api.ipify.org', port: 80, path: '/' },
         (res) => {
+            let data = '';
             res.on('data', (ip) => {
-                if (!ip) {
-                    console.log('0.0.0.0');
-                }
-                return console.log(`Your public IP address is - ${ip}`);
+                data += ip;
+            });
+            res.on('end', () => {
+                console.log(`Your public IP address is - ${data}`);
             });
         },
     );
@@ -20,4 +21,5 @@ getIpInfo.private = () => {
     const adresses = Object.keys(os).reduce((result, dev) => result.concat(os[dev].reduce((result, details) => result.concat(details.family === 'IPv4' && !details.internal ? [details.address] : []), [])));
     return console.log(`Your private IP address is - ${adresses}`);
 };
+getIpInfo.public();
 module.exports = getIpInfo;
